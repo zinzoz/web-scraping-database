@@ -4,7 +4,9 @@ module.exports = {
   client: 'pg',
     connection: {
      user: 'postgres',
-            password: '12qwaszx',
+     host:'52.163.229.144',
+          //  password: '12qwaszx',
+           password: '1234',
             database: 'webscraper'
     }
   }

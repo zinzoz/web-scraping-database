@@ -3,7 +3,7 @@ var router = express.Router();
 var request = require('request');
 var cheerio = require('cheerio');
 var db  = require('../db');
-/* GET home page. */  
+/* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
@@ -14,7 +14,7 @@ url = 'http://www.nasdaq.com/';
 var indexq , valueq, netq;
 var json = { index : "", value : "", net : ""};
 
-if( getTimenow() >= '09:30:00' &&  getTimenow() <= '16:00:00' ){
+//if( getTimenow() >= '09:30:00' &&  getTimenow() <= '16:00:00'){
 setInterval(function () {
 
 
@@ -58,7 +58,7 @@ db.insert({index: indexq , value: valueq ,net:netq ,date:getDateTime()}, 'id').i
 
 }, 10000);
 
-}
+//}
 
 
 });
